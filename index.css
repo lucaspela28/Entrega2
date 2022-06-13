@@ -13,25 +13,44 @@
     src: url(./Roboto/Roboto-BlackItalic.ttf);
 }
 
+@keyframes cambiar-color{
+    0%{
+        color: #E7C6FF;
+        transform: (0);
+    }
+    25%{
+        color: #cf48cd;
+    }
+    75%{
+        color: #6c07ee;
+    }
+    100%{
+        color: #3a0555;
+        transform: (1);
+    }
+}
+
 header{
+    width: 100%;
     margin: 0;
     padding: 0;
     display: flex;
-    width: 100%;
+    
     flex-wrap: wrap;
-    background: linear-gradient(black, white)
+    background: linear-gradient(#0708ee, #6c07ee, #9848cf, #cf48cd)
 }
 .img{
-    width: 10%;
     height: 10%;
+    width: 10%;
+    margin-left: 5%;
     display: flex;
     justify-content: center;
-    padding-left: 5%;
+    align-items: center;
 }
 
 nav{
-    display: flex;
     width: 80%;
+    display: flex;
     justify-content: right;
 }
 .lista-nav{
@@ -49,14 +68,20 @@ a{
     color: black;
     text-decoration: none;
     font-family: 'fuente1';
-    font-size: 2em;
+    font-size: 1em;
+    font-weight: 900;
+}
+.lista-nav a:hover{
+    font-size: 1.5em;
+    text-decoration: underline;
+    color: #E7C6FF;
     font-weight: 900;
 }
 .section{
     height: 100%;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url(./img/mujer-cuervo.jpg);
+    background-image: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url(./img/esoterico.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -65,15 +90,20 @@ a{
 }
 
 h1{
-    margin: 0;
+    margin-top: 5%;
     padding: 0;
-    color: grey;
+    color: #E7C6FF;
     font-family: "fuente3";
-    font-size: 6em;
+    font-size: 4em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    animation-name: cambiar-color;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+
 }
 
 .container{
@@ -84,23 +114,24 @@ h1{
     width: 50%;
 }
 .container3{
-    height: 50%;
     width: 50%;
+    margin-top: 10%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 .imagen{
-    min-width: 90%;
-    min-height: 90%;
+    min-width: 50%;
+    min-height: 50%;
 }
-h3{
-    color: darkgrey;
-    font-size: 3em;
+.parrafo1{
+    color: #c452fd;
+    font-size: 2em;
     font-family: "fuente1";
     padding-left: 20%;
     padding-top: 20%;
+    overflow: visible;
 }
 .contain-boton{
     display: flex;
@@ -109,34 +140,186 @@ h3{
 }
 
 .boton{
-    width: 300px;
-    height: 50px;
+    width: 15%;
+    height: 5%;
     padding: 0;
-    margin: 0;
+    margin-top: 5%;
+    margin-bottom: 2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: beige;
     font-family: "fuente2";
-    font-size: larger;
+    font-size: small;
     border-color: black;
     border-style: solid;
+    border-radius: 10px;
     overflow: auto;
-    background-color: black;
-    margin-bottom: 2%;
+    background-color: blueviolet;
+   
 }
-.parrafo{
-    background: radial-gradient(circle, rgba(2,5,14,0.3665230938416423) 0%, rgba(180,180,180,1) 57%, rgba(228,230,241,0.055672653958944274) 89%);
+.boton:hover{
+    background-color: orchid;
+    font-size: small;
+    color: #6c07ee;
+}
+.parrafo2{
+    background: radial-gradient(circle, rgba(168, 184, 235, 0.367) 0%, rgb(231, 190, 221) 57%, rgba(118, 134, 212, 0.056) 89%);
     height: 15%;
-    color: black;
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    color:  rgba(237, 238, 243, 0.056);
     font-family: "fuente2";
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 900;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
+.parrafo2:hover{
+    color: #62088f;
+    background-color: pink;
+}
+.articles{
+    height: 100%;
+    border: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background: radial-gradient(blueviolet, pink, blueviolet);
+}
+.imagen1{
+    height: 80%;
+    width: 25%;
+    border-radius: 20px;
+    margin: 20px 20px 20px 20px;
+    padding:0;
+   background-image:linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url(./img/velas.jpg);
+   background-size: cover;
+   background-position: center;
+}
 
+.imagen2{
+    border-radius: 20px;
+    height: 80%;
+    width: 25%;
+    margin: 20px 20px 20px 20px;
+    padding: 0;
+    background-image:linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url(./img/tarot.jpg);
+}
+
+.imagen3{
+    border-radius: 20px;
+    height: 80%;
+    width: 25%;
+    margin:  20px 20px 20px 20px;
+    padding: 0;
+    background-image: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url(./img/runas-vikingas.jpg);
+    background-position: center;
+}
+.articles h4{
+    font-family: "fuente3";
+    font-size: 1.2em;
+    color: beige;
+    margin: 15px 4px 4px 4px;
+    display: flex;
+    background-color: #cf48cd;
+    justify-content: center;
+    border-radius: 20px;
+}
+.articles p{
+    color: pink;
+    font-size: 2.5em;
+    margin: 3%;
+}
+.articles a{
+    width: 100px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6c07ee;
+    border-radius: 20px; 
+}
+.articles a:hover{
+    background-color: #cf48cd;
+    color: aliceblue;
+}
+.leer{
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagen2 a{
+    margin-top: 15%;
+}
+.anotarse{
+    width: 100%;
+    padding-bottom: 2%;
+    background: linear-gradient(blueviolet, pink, blueviolet, pink);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.anotarse h2{
+    color: rgb(38, 4, 70); 
+    text-decoration: underline;
+    font-family: "fuente3";
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-anotarse{
+    display: flex;
+     justify-content: space-around;
+    
+}
+.container-anotarse div{
+    width: 20%;
+    border: 2px solid black;
+    border-radius: 100%;
+    background-color: #6e4681;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.anotarse h4{
+    font-family: "fuente3";
+    font-size: 1.4em;
+    color: #d596f5;
+    padding-top: 2%;
+    margin: 0;
+}
+.anotarse li{
+    color: pink;
+    font-family: "fuente2";
+}
+.div-bot{
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bot-registro{
+    width: 12%;
+    background-color: rebeccapurple;
+    color: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bot-registro:hover{
+    background-color: pink;
+    color: #6c07ee;
+
+}
 

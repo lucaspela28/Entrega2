@@ -382,7 +382,6 @@ h1{
 }
 
 .modos div:hover {
-    background-color: #2b033f;
     transform: scale(1.2);
 }
 
@@ -393,12 +392,10 @@ h1{
 
 .modos p {
     padding-left: 2%;
-    color: pink;
+    color: #2b033f;
     font-family: "fuente2";
     font-size: smaller;
 }
-
-
 
 .footer {
     width: 100%;
@@ -406,32 +403,37 @@ h1{
     background: radial-gradient(blueviolet, pink, blueviolet );
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .contain-footer {
-    width: 40%;
+    width: 35%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 
 .form-footer {
-    width: 40%;
+    width: 35%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
 }
 
 .footer h3 {
     font-family: "fuente3";
     font-size: 1.5em;
     text-decoration: underline;
+    display: flex;
+    justify-content: center;
 }
 
 .contain-footer li {
     font-family: "fuente2";
     font-weight: 900;
+    margin-top: 20px;
 }
 
 .form-footer label {
